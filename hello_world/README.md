@@ -1,1 +1,1 @@
-This is the Hello, World project - practicing C basics
+Hello, World project for practicing the C toolchain (preprocessor, compiler, assembler, linker).
