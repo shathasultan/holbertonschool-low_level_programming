@@ -1,5 +1,4 @@
-
 Functions and nested loops — ALX/Holberton
 
-This directory contains C functions for practicing loops, characters, and number operations.
+This directory contains solutions for loop-based tasks in C.
 
