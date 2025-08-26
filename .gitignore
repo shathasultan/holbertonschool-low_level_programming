@@ -1,8 +1,6 @@
 
-# Ignore local test drivers and binaries
 *-main.c
 main.c
-test*.c
 a.out
 *.swp
 .DS_Store
