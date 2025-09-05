@@ -1,1 +1,5 @@
-Low-level programming with C - Hello, World
+
+# Low Level Programming
+
+This repository contains C projects for the Holberton School curriculum.
+
