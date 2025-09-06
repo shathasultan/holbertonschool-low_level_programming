@@ -1,3 +1,29 @@
+# Ignore test mains
+*-main.c
+
+# Ignore compiled binaries/executables
+*.o
+*.out
+*.exe
+*_strcat
+*_strncat
+*_strncpy
+*_strcmp
+*_rev_array
+*_string_toupper
+*_cap
+*_print_numbers
+*_isdigit
+*_mul
+*_print_most_numbers
+*_more_numbers
+*_print_line
+*_print_diagonal
+*_print_square
+*_fizz_buzz
+*_print_triangle
+
+# Ignore general compiled files
 a.out
 *.swp
-.DS_Store
+*.swo
