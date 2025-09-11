@@ -1,0 +1,5 @@
+*.o
+*.out
+*.exe
+0-memset
+tests/
