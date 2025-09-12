@@ -1,10 +1,14 @@
 
+/**
+* File: 3-factorial.c
+* Desc: Implements factorial using recursion.
+*/
 #include "main.h"
 /**
 * factorial - returns the factorial of a given number
-* @n: the number
+* @n: input integer
 *
-* Return: factorial of n; -1 if n < 0; 1 if n == 0
+* Return: factorial of n, or -1 if n is negative
 */
 int factorial(int n)
 {
