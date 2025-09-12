@@ -1,5 +1,12 @@
+
+# Binaries
+0-puts_recursion
+1-print_rev_recursion
+2-strlen_recursion
+3-factorial
 *.o
 *.out
 *.exe
-0-memset
+# Local tests
 tests/
+recursion/tests-3-main.c
