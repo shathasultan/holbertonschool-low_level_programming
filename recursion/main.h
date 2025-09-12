@@ -1,8 +1,4 @@
 
-/**
- * File: main.h
- * Desc: Prototypes for recursion tasks.
- */
 #ifndef MAIN_H
 #define MAIN_H
 int _putchar(char c);
