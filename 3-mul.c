@@ -20,7 +20,7 @@ return (1);
 }
 a = atoi(argv[1]);
 b = atoi(argv[2]);
-res = a * b;
+res = a *b;
 printf("%d\n", res);
 return (0);
 }
