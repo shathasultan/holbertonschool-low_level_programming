@@ -1,19 +1,15 @@
 
 #include "dog.h"
 #include <stdio.h>
-#include <stddef.h>
-
-
 /**
- * print_dog - prints a struct dog
- * @d: pointer to struct dog
- *
- * Description: If an element is NULL, print (nil).
- *              If d itself is NULL, print nothing.
- */
+* print_dog - prints a struct dog
+* @d: pointer to struct dog to print
+*
+* Description: If @d is NULL, print nothing.
+* If any string field is NULL, print "(nil)" for that field.
+*/
 void print_dog(struct dog *d)
 {
-
 if (d == NULL)
 return;
 if (d->name == NULL)
