@@ -1,7 +1,5 @@
 
-Task 0: print_name - use function pointers to print names.
-
-This task demonstrates creating a function that prints names using
-a pointer to another function. If the name or function pointer is NULL,
-nothing is printed.
+Task 1: array_iterator - executes a function on each element of an array.
+The function `array_iterator` takes an integer array, its size, and a function pointer `action`.
+It applies `action` to each element of the array. If the array or function pointer is NULL, it does nothing.
 
