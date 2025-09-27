@@ -18,9 +18,8 @@ printf("Hello, my name is %s\n", name);
 */
 void print_name_uppercase(char *name)
 {
-unsigned int i;
+unsigned int i = 0;
 printf("Hello, my uppercase name is ");
-i = 0;
 while (name[i])
 {
 if (name[i] >= 'a' && name[i] <= 'z')
@@ -32,12 +31,12 @@ i++;
 putchar('\n');
 }
 /**
-* print_name - executes a function on a given name
-* @name: name of the person
-* @f: pointer to function that takes a string and returns void
-*
-* Return: Nothing.
-*/
+ * print_name - executes a function on a given name
+ * @name: name of the person
+ * @f: pointer to function that takes a string and returns void
+ *
+ * Return: Nothing.
+ */
 void print_name(char *name, void (*f)(char *))
 {
 if (name != NULL && f != NULL)
