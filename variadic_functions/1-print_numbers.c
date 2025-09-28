@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include "variadic_functions.h"
 /**
-* print_numbers - prints numbers, separated by separator, then a newline
+* print_numbers - prints numbers separated by separator, then a newline
 * @separator: string to print between numbers (can be NULL)
 * @n: number of integers passed to the function
 *
-* If separator is NULL, it is not printed.
+* If separator is NULL, the separator is not printed.
 */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
