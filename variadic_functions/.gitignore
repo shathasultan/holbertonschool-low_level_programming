@@ -1,0 +1,12 @@
+
+# Ignore backup and temporary files
+*.save
+*~
+# Ignore compiled binaries
+test_all
+test_numbers
+test_strings
+*.o
+*.out
+*.exe
+

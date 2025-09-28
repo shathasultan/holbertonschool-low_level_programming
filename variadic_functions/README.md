@@ -1,4 +1,6 @@
 
-ask 3: print_all
+Task 3: print_all
 Implements print_all(const char * const format, ...).
-Prints any combination of types (c, i, f, s), handles NULL strings as (nil), separates with ", ", and ends with a newline.
+Prints arguments based on format string: c (char), i (int), f (float), s (string).
+Prints (nil) if string argument is NULL. Ends with a newline.
+
