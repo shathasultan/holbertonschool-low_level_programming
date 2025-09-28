@@ -1,5 +1,5 @@
 
-Task 0: sum_them_all
-
-Implements sum_them_all(const unsigned int n, ...) that returns the sum of all its integer arguments.
+Task 1: print_numbers
+Implements print_numbers(const char *separator, const unsigned int n, ...).
+Prints n integers separated by separator (if non-NULL) and ends with a newline.
 
