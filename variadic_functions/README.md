@@ -1,5 +1,6 @@
 
-Task 2: print_strings
-Implements print_strings(const char *separator, const unsigned int n, ...).
-Prints n strings separated by separator (if non-NULL), prints (nil) for NULL strings, and ends with a newline.
+Task 3: print_all
+Implements print_all(const char * const format, ...).
+Prints chars, ints, floats, and strings according to the format string.
+Prints (nil) for NULL strings, separates with commas, ends with newline.
 
