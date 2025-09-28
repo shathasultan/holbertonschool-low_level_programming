@@ -1,40 +1,46 @@
 
-#include <stdio.h>
-#include <stdarg.h>
-#include <stddef.h>
 #include "variadic_functions.h"
+#include <stdio.h>
+
 /**
-* print_all - prints anything based on format string
-* @format: list of types of arguments passed
-* c: char, i: integer, f: float, s: char *
-*/
+ * print_all - prints anything based on a format string
+ * @format: string of types: c (char), i (int), f (float), s (string)
+ *
+ * Only allowed:
+ * - 2 if statements max
+ * - 2 while loops max
+ * - No else / else if
+ * - Max 9 variables
+ */
 void print_all(const char * const format, ...)
 {
 va_list ap;
 unsigned int i = 0;
-char *str;
-char *separator = "";
+char *s;
+char *sep = "";
 va_start(ap, format);
-if (format)
+while (format && format[i])
 {
-while (format[i])
+if (format[i] == 'c' || format[i] == 'i' ||
+format[i] == 'f' || format[i] == 's')
 {
 if (format[i] == 'c')
-printf("%s%c", separator, va_arg(ap, int));
+printf("%s%c", sep, va_arg(ap, int));
 if (format[i] == 'i')
-printf("%s%d", separator, va_arg(ap, int));
+printf("%s%d", sep, va_arg(ap, int));
 if (format[i] == 'f')
-printf("%s%f", separator, va_arg(ap, double));
+printf("%s%f", sep, va_arg(ap, double));
 if (format[i] == 's')
 {
-str = va_arg(ap, char *);
-if (!str)
-str = "(nil)";
-printf("%s%s", separator, str);
+s = va_arg(ap, char *);
+if (!s)
+printf("%s(nil)", sep);
+else
+printf("%s%s", sep, s);
 }
-separator = ", ";
+sep = ", ";
+}
 i++;
-}
 }
 va_end(ap);
 printf("\n");
