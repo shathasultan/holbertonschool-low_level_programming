@@ -1,4 +1,4 @@
-k#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "lists.h"  // تأكد من أنك تضيف هذا السطر!
