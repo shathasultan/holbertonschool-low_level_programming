@@ -1,27 +1,45 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h>  /* For malloc, free */
 #include <string.h>
-#include "lists.h"  // تأكد من أنك تضيف هذا السطر!
+#include <stdio.h>
+#include "lists.h"
+
 int main(void)
 {
-    list_t *head;
-    list_t *new;
-    list_t hello = {"World", 5, NULL};
+    list_t *head = NULL;
+    list_t *new1, *new2;
     size_t n;
-    head = &hello;
-    new = malloc(sizeof(list_t));
-    if (new == NULL)
-    {
-printf("Error\n");
-return (1);
-    }
-    new->str = strdup("Hello");
-    new->len = 5;
-    new->next = head;
-    head = new;
-    n = list_len(head);  // هنا يتم استدعاء دالة list_len
-    printf("-> %lu elements\n", n);
-    free(new->str);
-    free(new);
-    return (0);
+
+    /* اختبار حالة القائمة الفارغة */
+    n = list_len(head);
+    printf("-> %lu elements (expected 0)\n", n);
+
+    /* إضافة عنصر */
+    new1 = malloc(sizeof(list_t));
+    new1->str = strdup("Hello");
+    new1->len = 5;
+    new1->next = head;
+    head = new1;
+
+    /* اختبار حالة قائمة تحتوي على عنصر واحد */
+    n = list_len(head);
+    printf("-> %lu elements (expected 1)\n", n);
+
+    /* إضافة عنصر آخر */
+    new2 = malloc(sizeof(list_t));
+    new2->str = strdup("World");
+    new2->len = 5;
+    new2->next = head;
+    head = new2;
+
+    /* اختبار حالة قائمة تحتوي على عنصرين */
+    n = list_len(head);
+    printf("-> %lu elements (expected 2)\n", n);
+
+    /* تحرير الذاكرة */
+    free(new1->str);
+    free(new2->str);
+    free(new1);
+    free(new2);
+
+    return 0;
 }
