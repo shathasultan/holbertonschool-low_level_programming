@@ -1,6 +1,5 @@
 #include "lists.h"
 #include <stdio.h> /* لأجل printf */
-
 void print_list(const list_t *h)
 {
     size_t n = 0;
