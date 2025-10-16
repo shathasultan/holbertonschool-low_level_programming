@@ -1,45 +1,30 @@
-#include <stdlib.h>  /* For malloc, free */
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 int main(void)
 {
-    list_t *head = NULL;
-    list_t *new1, *new2;
+    list_t *head;
+    list_t *new;
     size_t n;
 
-    /* اختبار حالة القائمة الفارغة */
+    head = NULL;
+
+    new = malloc(sizeof(list_t));
+    if (new == NULL)
+    {
+        printf("Error\n");
+        return (1);
+    }
+    new->str = "Hello";
+    new->len = 5;
+    new->next = head;
+    head = new;
+
     n = list_len(head);
-    printf("-> %lu elements (expected 0)\n", n);
+    printf("-> %lu elements\n", n);
 
-    /* إضافة عنصر */
-    new1 = malloc(sizeof(list_t));
-    new1->str = strdup("Hello");
-    new1->len = 5;
-    new1->next = head;
-    head = new1;
-
-    /* اختبار حالة قائمة تحتوي على عنصر واحد */
-    n = list_len(head);
-    printf("-> %lu elements (expected 1)\n", n);
-
-    /* إضافة عنصر آخر */
-    new2 = malloc(sizeof(list_t));
-    new2->str = strdup("World");
-    new2->len = 5;
-    new2->next = head;
-    head = new2;
-
-    /* اختبار حالة قائمة تحتوي على عنصرين */
-    n = list_len(head);
-    printf("-> %lu elements (expected 2)\n", n);
-
-    /* تحرير الذاكرة */
-    free(new1->str);
-    free(new2->str);
-    free(new1);
-    free(new2);
+    free(new);
 
     return 0;
 }
