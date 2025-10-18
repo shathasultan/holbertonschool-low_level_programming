@@ -1,6 +1,6 @@
 #include "lists.h"
 #include <unistd.h>
-#include <stdio.h>  /* Added to support snprintf and strlen */
+#include <stdio.h>  /* Added to support snprintf */
 #include <string.h>  /* Added to support strlen */
 
 /**
@@ -20,7 +20,7 @@ size_t print_list(const list_t *h)
         {
             /* Print the length of the string and the string itself */
             snprintf(buffer, sizeof(buffer), "[%u] %s\n", h->len, h->str);
-            write(1, buffer, strlen(buffer));
+            write(1, buffer, sizeof(buffer));  /* Print directly */
         }
         else
         {
@@ -32,3 +32,4 @@ size_t print_list(const list_t *h)
 
     return (count);
 }
+
