@@ -1,5 +1,4 @@
 # Holberton School - Low Level Programming
-
 This repository contains low-level programming tasks for **Holberton School**. It includes:
 
 - Linked lists
